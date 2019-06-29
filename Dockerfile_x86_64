@@ -5,7 +5,8 @@ ARG USERNAME=frommakefile
 FROM ${USERNAME}/${DOCKERSRC}:${ARCH}
 #
 RUN set -xe \
-    && npm install -g vue-cli  \
+#     && npm install -g vue-cli  \
+    && npm install -g @vue/cli @vue/cli-service-global \
     && rm -rf /var/cache/apk/* /tmp/*
 # VOLUME /home/alpine/project/ # specify at runtime
 USER alpine
